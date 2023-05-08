@@ -9,3 +9,4 @@ pillow
 django-jazzmin
 celery[redis]
 django-cors-headers
+django-filter

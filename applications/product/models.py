@@ -14,8 +14,8 @@ class Product(models.Model):
         ('on_sale', 'on sale'),
         ('out_of_stock', 'out of stock')
     )
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='electronics')
-    category = models.ForeignKey(Category, related_name='electronics', on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='products')
+    category = models.ForeignKey(Category, related_name='products', on_delete=models.CASCADE)
     title = models.CharField(max_length=88)
     price = models.DecimalField(decimal_places=2, max_digits=10)
     amount = models.PositiveIntegerField(default=10)
@@ -27,5 +27,5 @@ class Product(models.Model):
 
 
 class Image(models.Model):
-    electronic = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='images')
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='images')
     image = models.ImageField(upload_to='images/')
