@@ -1,0 +1,11 @@
+django
+djangorestframework
+djangorestframework-simplejwt
+python-decouple
+drf-yasg
+dj-config-url
+psycopg2-binary
+pillow
+django-jazzmin
+celery[redis]
+django-cors-headers
